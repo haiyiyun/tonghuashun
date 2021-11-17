@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="gbk"?>
+<node>
+	<nodes>
+		<node name="_日期序列指标库" title="日期序列指标库" isgroup="true">
+			<nodes>
+				<node name="_基本资料-证券资料" title="基本资料-证券资料" isgroup="true">
+					<nodes>
+						<node name="stockname" title="股票简称" process="00420" attr="base"/>
+						<node name="stockcode" title="股票代码" process="00421" attr="base"/>
+						<node name="thscode" title="同花顺代码" process="00003" attr="base"/>
+						<node name="ISINcode" title="ISIN代码" process="00422" attr="base"/>
+						<node name="SEDOLcode" title="SEDOL代码" process="00423" attr="base"/>
+						<node name="stocktype" title="股票种类" process="00426" attr="base"/>
+						<node name="IPO_date" title="首发上市日期" process="00427" attr="base"/>
+						<node name="IPO_place" title="上市地点" process="00428" attr="base"/>
+						<node name="company_name" title="公司中文名称" process="00431" attr="base"/>
+						<node name="company_name_eng" title="公司英文名称 " process="00432" attr="base"/>
+						<node name="founddate" title="成立日期" process="00433" attr="base"/>
+						<node name="RegisteredCapital" title="注册资本" process="00435" attr="base"/>
+						<node name="LegalRepresentative" title="法人代表" process="00436" attr="base"/>
+						<node name="BusinessRange" title="经营范围" process="00437" attr="base"/>
+						<node name="province" title="省份" process="00446" attr="base"/>
+						<node name="city" title="地级市" process="00447" attr="base"/>
+						<node name="city_county" title="县级市" process="05238" attr="base"/>
+						<node name="RegisteredAddress" title="注册地址" process="00448" attr="base"/>
+						<node name="company_summary" title="公司简介" process="06371" attr="base"/>
+						<node name="AuditInstitutions" title="审计机构" process="00458" attr="base"/>
+						<node name="counsel" title="法律顾问" process="00459" attr="base"/>
+					</nodes>
+				</node>
+				<node name="_基本资料-股本指标" title="基本资料-股本指标" isgroup="true">
+					<nodes>
+						<node name="capitalization" title="总股本" process="00462" attr="base"/>
+						<node name="capitalization_ssq" title="上市前总股本" process="05773" attr="base"/>
+						<node name="currency_a" title="流通A股" process="00463" attr="base"/>
+						<node name="total_a" title="A股合计" process="00465" attr="base"/>
+						<node name="freecurrency" title="自由流通股" process="06730" attr="base"/>
+					</nodes>
+				</node>
+				<node name="_基本行情" title="基本行情" isgroup="true">
+					<nodes>
+						<node name="close_pre" title="前收盘价" process="00038" attr="base">
+							<params>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00216" default="100"/>
+							</params>
+						</node>
+						<node name="open" title="开盘价" process="00039" attr="base">
+							<params>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00216" default="100"/>
+							</params>
+						</node>
+						<node name="high" title="最高价" process="00040" attr="base">
+							<params>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00216" default="100"/>
+							</params>
+						</node>
+						<node name="low" title="最低价" process="00041" attr="base">
+							<params>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00216" default="100"/>
+							</params>
+						</node>
+						<node name="close" title="收盘价" process="00042" attr="base">
+							<params>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00216" default="100"/>
+							</params>
+						</node>
+						<node name="average" title="均价" process="00043" attr="base">
+							<params>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00216" default="100"/>
+							</params>
+						</node>
+						<node name="chg" title="涨跌" process="00044" attr="base">
+							<params>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00216" default="100"/>
+							</params>
+						</node>
+						<node name="pct_chg" title="涨跌幅" process="00559" attr="base">
+							<params>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00216" default="100"/>
+							</params>
+						</node>
+						<node name="ex_chg" title="换手率" process="00046" attr="base"/>
+						<node name="ex_effective_chg" title="有效换手率" process="06886" attr="base"/>
+						<node name="volume" title="成交量" process="00047" attr="base"/>
+						<node name="amt" title="成交额" process="00048" attr="base"/>
+						<node name="amp" title="振幅" process="00049" attr="base"/>
+						<node name="chg_issue" title="相对发行价涨跌" process="00560" attr="base">
+							<params>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00185" default="100"/>
+							</params>
+						</node>
+						<node name="pct_chg_issue" title="相对发行价涨跌幅" process="00561" attr="base">
+							<params>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00185" default="100"/>
+							</params>
+						</node>
+						<node name="pct_chg_market" title="相对大盘涨跌幅" process="06797" attr="base">
+							<params>
+								<param name="market" title="大盘指标选项" type="dt_integer" param_list="P00038" default="100"/>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00072" default="100"/>
+							</params>
+						</node>
+						<node name="condition" title="交易状态" process="00562" attr="base"/>
+						<node name="reason" title="停牌原因" process="00563" attr="base"/>
+					</nodes>
+				</node>
+				<node name="_技术指标" title="技术指标" isgroup="true">
+					<nodes>
+						<node name="BBI" title="BBI多空指数" process="03099" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="3"/>
+								<param name="day2" title="周期2" type="dt_integer" default="6"/>
+								<param name="day3" title="周期3" type="dt_integer" default="12"/>
+								<param name="day4" title="周期4" type="dt_integer" default="24"/>
+							</params>
+						</node>
+						<node name="DDI" title="DDI方向标准离差指数" process="03100" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="13"/>
+								<param name="day2" title="周期2" type="dt_integer" default="30"/>
+								<param name="Adjusted-Factor" title="平滑因子" type="dt_integer" default="10"/>
+								<param name="day3" title="周期3" type="dt_integer" default="5"/>
+								<param name="Option" title="DDI指标选项" type="dt_integer" param_list="P10001" default="1"/>
+							</params>
+						</node>
+						<node name="DMA" title="DMA平均线差" process="03101" attr="index">
+							<params>
+								<param name="Short-term-days" title="短周期" type="dt_integer" default="10"/>
+								<param name="long-term-days" title="长周期" type="dt_integer" default="50"/>
+								<param name="day" title="周期" type="dt_integer" default="10"/>
+								<param name="Option" title="DMA指标选项" type="dt_integer" param_list="P10002" default="1"/>
+							</params>
+						</node>
+						<node name="MA" title="MA简单移动平均" process="05145" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="5"/>
+							</params>
+						</node>
+						<node name="EXPMA" title="EXPMA指数平均数" process="05146" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="5"/>
+							</params>
+						</node>
+						<node name="MACD" title="MACD指数平滑异同平均" process="03105" attr="index">
+							<params>
+								<param name="Short-term-days" title="短周期" type="dt_integer" default="12"/>
+								<param name="long-term-days" title="长周期" type="dt_integer" default="26"/>
+								<param name="day" title="周期" type="dt_integer" default="9"/>
+								<param name="Option" title="MACD指标选项" type="dt_integer" param_list="P10003" default="1"/>
+							</params>
+						</node>
+						<node name="MTM" title="MTM动力指标" process="03106" attr="index">
+							<params>
+								<param name="Interval-number" title="间隔周期" type="dt_integer" default="6"/>
+								<param name="day" title="周期" type="dt_integer" default="6"/>
+								<param name="Option" title="MTM指标选项" type="dt_integer" param_list="P10004" default="1"/>
+							</params>
+						</node>
+						<node name="PRICEOSC" title="PRICEOSC价格振荡指标" process="03107" attr="index">
+							<params>
+								<param name="Short-term-days" title="短周期" type="dt_integer" default="12"/>
+								<param name="long-term-days" title="长周期" type="dt_integer" default="26"/>
+							</params>
+						</node>
+						<node name="TRIX" title="TRIX三重指数平滑平均" process="03109" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="12"/>
+								<param name="day2" title="周期2" type="dt_integer" default="20"/>
+								<param name="Option" title="TRIX指标选项" type="dt_integer" param_list="P10005" default="1"/>
+							</params>
+						</node>
+						<node name="BIAS" title="BIAS乖离率" process="05147" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="12"/>
+							</params>
+						</node>
+						<node name="CCI" title="CCI顺势指标" process="03112" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="14"/>
+							</params>
+						</node>
+						<node name="DBCD" title="DBCD异同离差乖离率" process="03113" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="5"/>
+								<param name="day2" title="周期2" type="dt_integer" default="16"/>
+								<param name="day3" title="周期3" type="dt_integer" default="76"/>
+								<param name="Option" title="DBCD指标选项" type="dt_integer" param_list="P10006" default="1"/>
+							</params>
+						</node>
+						<node name="DPO" title="DPO区间震荡线" process="03114" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="20"/>
+								<param name="day2" title="周期2" type="dt_integer" default="6"/>
+								<param name="Option" title="DPO指标选项" type="dt_integer" param_list="P10007" default="1"/>
+							</params>
+						</node>
+						<node name="KDJ" title="KDJ随机指标" process="03115" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="9"/>
+								<param name="day1" title="周期1" type="dt_integer" default="3"/>
+								<param name="day2" title="周期2" type="dt_integer" default="3"/>
+								<param name="Option" title="KDJ指标选项" type="dt_integer" param_list="P10008" default="1"/>
+							</params>
+						</node>
+						<node name="LWR" title="LWR威廉指标" process="03116" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="9"/>
+								<param name="day1" title="周期1" type="dt_integer" default="3"/>
+								<param name="day2" title="周期2" type="dt_integer" default="3"/>
+								<param name="Option" title="LWR指标选项" type="dt_integer" param_list="P10009" default="1"/>
+							</params>
+						</node>
+						<node name="ROC" title="ROC变动速率" process="03117" attr="index">
+							<params>
+								<param name="Interval-number" title="间隔周期" type="dt_integer" default="12"/>
+								<param name="day" title="周期" type="dt_integer" default="6"/>
+								<param name="Option" title="ROC指标选项" type="dt_integer" param_list="P10010" default="1"/>
+							</params>
+						</node>
+						<node name="RSI" title="RSI相对强弱指标" process="05148" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="6"/>
+							</params>
+						</node>
+						<node name="SI" title="SI摆动指标" process="03119" attr="index">	
+						</node>
+						<node name="SRDM" title="SRDM动向速度比率" process="03121" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="30"/>
+								<param name="Option" title="SLOWKD指标选项" type="dt_integer" param_list="P10011" default="1"/>
+							</params>
+						</node>
+						<node name="VROC" title="VROC量变动速率" process="03122" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="12"/>
+							</params>
+						</node>
+						<node name="VRSI" title="VRSI量相对强弱" process="05149" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="6"/>
+							</params>
+						</node>
+						<node name="WR" title="WR威廉指标" process="05150" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="14"/>
+							</params>
+						</node>
+						<node name="ARBR" title="ARBR人气意愿指标" process="03124" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="26"/>
+								<param name="Option" title="ARBR指标选项" type="dt_integer" param_list="P10012" default="1"/>
+							</params>
+						</node>
+						<node name="CR" title="CR能量指标" process="05151" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="26"/>
+							</params>
+						</node>
+						<node name="PSY" title="PSY心理指标" process="03126" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="12"/>
+								<param name="day2" title="周期2" type="dt_integer" default="6"/>
+								<param name="Option" title="PSY指标选项" type="dt_integer" param_list="P10013" default="1"/>
+							</params>
+						</node>
+						<node name="VR" title="VR成交量比率" process="03127" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="26"/>
+							</params>
+						</node>
+						<node name="WAD" title="WAD威廉聚散指标" process="03128" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="30"/>
+								<param name="Option" title="WAD指标选项" type="dt_integer" param_list="P10014" default="1"/>
+							</params>
+						</node>
+						<node name="MFI" title="MFI资金流向指标" process="03129" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="14"/>
+							</params>
+						</node>
+						<node name="OBV" title="OBV能量潮" process="05152" attr="index">
+							<params>
+								<param name="Option" title="OBV指标选项" type="dt_integer" param_list="P10015" default="1"/>
+							</params>
+						</node>
+						<node name="PVT" title="PVT量价趋势指标" process="05153" attr="index">	
+						</node>
+						<node name="WVAD" title="WVAD威廉变异离散量" process="03133" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="24"/>
+								<param name="day2" title="周期2" type="dt_integer" default="6"/>
+								<param name="Option" title="WVAD指标选项" type="dt_integer" param_list="P10016" default="1"/>
+							</params>
+						</node>
+						<node name="BBIBOLL" title="BBIBOLL多空布林线" process="03134" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="10"/>
+								<param name="Broadband" title="宽带" type="dt_integer" default="3"/>
+								<param name="Option" title="BBIBOLL指标选项" type="dt_integer" param_list="P10017" default="1"/>
+							</params>
+						</node>
+						<node name="BOLL" title="BOLL布林线" process="03135" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="26"/>
+								<param name="Broadband" title="宽带" type="dt_integer" default="2"/>
+								<param name="Option" title="BOLL指标选项" type="dt_integer" param_list="P10030" default="1"/>
+							</params>
+						</node>
+						<node name="CDP" title="CDP逆势操作" process="03136" attr="index">
+							<params>
+								<param name="Option" title="CDP指标选项" type="dt_integer" param_list="P10018" default="1"/>
+							</params>
+						</node>
+						<node name="ENV" title="ENV指标" process="05154" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="14"/>
+								<param name="Option" title="ENV指标选项" type="dt_integer" param_list="P10019" default="1"/>
+							</params>
+						</node>
+						<node name="MIKE" title="MIKE麦克指标" process="03138" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="12"/>
+								<param name="Option" title="MIKE指标选项" type="dt_integer" param_list="P10020" default="1"/>
+							</params>
+						</node>
+						<node name="LB" title="量比" process="05155" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="5"/>
+							</params>
+						</node>
+						<node name="VMA" title="VMA量简单移动平均" process="05156" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="5"/>
+							</params>
+						</node>
+						<node name="VMACD" title="VMACD量指数平滑异同平均" process="03141" attr="index">
+							<params>
+								<param name="Short-term-days" title="短周期" type="dt_integer" default="12"/>
+								<param name="long-term-days" title="长周期" type="dt_integer" default="26"/>
+								<param name="day" title="周期" type="dt_integer" default="9"/>
+								<param name="Option" title="VMACD指标选项" type="dt_integer" param_list="P10021" default="1"/>
+							</params>
+						</node>
+						<node name="VOSC" title="VOSC成交量震荡" process="03142" attr="index">
+							<params>
+								<param name="Short-term-days" title="短周期" type="dt_integer" default="12"/>
+								<param name="long-term-days" title="长周期" type="dt_integer" default="26"/>
+							</params>
+						</node>
+						<node name="TAPI" title="TAPI加权指数成交值" process="03143" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="6"/>
+								<param name="Option" title="TAPI指标选项" type="dt_integer" param_list="P10022" default="1"/>
+							</params>
+						</node>
+						<node name="VSTD" title="VSTD成交量标准差" process="03144" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="10"/>
+							</params>
+						</node>
+						<node name="ADTM" title="ADTM动态买卖气指标" process="03145" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="23"/>
+								<param name="day1" title="周期1" type="dt_integer" default="8"/>
+								<param name="Option" title="ADTM指标选项" type="dt_integer" param_list="P10023" default="1"/>
+							</params>
+						</node>
+						<node name="MI" title="MI动量指标" process="03146" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="12"/>
+								<param name="Option" title="MI指标选项" type="dt_integer" param_list="P10024" default="1"/>
+							</params>
+						</node>
+						<node name="MICD" title="MICD异同离差动力指数" process="03147" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="3"/>
+								<param name="day1" title="周期1" type="dt_integer" default="10"/>
+								<param name="day2" title="周期2" type="dt_integer" default="20"/>
+								<param name="Option" title="MICD指标选项" type="dt_integer" param_list="P10025" default="1"/>
+							</params>
+						</node>
+						<node name="RC" title="RC变化率指数" process="03148" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="50"/>
+							</params>
+						</node>
+						<node name="RCCD" title="RCCD异同离差变化率指数" process="03149" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="59"/>
+								<param name="day1" title="周期1" type="dt_integer" default="21"/>
+								<param name="day2" title="周期2" type="dt_integer" default="28"/>
+								<param name="Option" title="RCCD指标选项" type="dt_integer" param_list="P10026" default="1"/>
+							</params>
+						</node>
+						<node name="SRMI" title="SRMI(MI修正指标)" process="03150" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="9"/>
+							</params>
+						</node>
+						<node name="DPTB" title="DPTB大盘同步指标" process="05157" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="7"/>
+								<param name="Option" title="大盘指标选项" type="dt_integer" param_list="P10027" default="1"/>
+							</params>
+						</node>
+						<node name="JDQS" title="JDQS阶段强势指标" process="05158" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="20"/>
+								<param name="Option" title="大盘指标选项" type="dt_integer" param_list="P10027" default="1"/>
+							</params>
+						</node>
+						<node name="JDRS" title="JDRS阶段弱势指标" process="05159" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="20"/>
+								<param name="Option" title="大盘指标选项" type="dt_integer" param_list="P10027" default="1"/>
+							</params>
+						</node>
+						<node name="ZDZB" title="ZDZB筑底指标" process="05160" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="125"/>
+								<param name="day1" title="周期1" type="dt_integer" default="5"/>
+								<param name="day2" title="周期2" type="dt_integer" default="20"/>
+								<param name="Option" title="ZDZB指标选项" type="dt_integer" param_list="P10028" default="1"/>
+							</params>
+						</node>
+						<node name="ATR" title="ATR真实波幅" process="03155" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="14"/>
+								<param name="Option" title="ATR指标选项" type="dt_integer" param_list="P10029" default="1"/>
+							</params>
+						</node>
+						<node name="MASS" title="MASS梅丝线" process="05161" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="9"/>
+								<param name="day2" title="周期2" type="dt_integer" default="25"/>
+							</params>
+						</node>
+						<node name="STD" title="STD标准差" process="05162" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="26"/>
+							</params>
+						</node>
+						<node name="VHF" title="VHF纵横指标" process="05163" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="28"/>
+							</params>
+						</node>
+						<node name="CVLT" title="CVLT佳庆离散指标" process="05164" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="10"/>
+							</params>
+						</node>
+					</nodes>
+				</node>
+				<node name="_融资融券" title="融资融券" isgroup="true">
+					<nodes>
+						<node name="rz_buy_money" title="融资买入额" process="05078" attr="base"/>
+						<node name="rz_buy_quantity" title="融资买入量" process="06705" attr="base"/>
+						<node name="rz_repay_money" title="融资偿还额" process="05079" attr="base"/>
+						<node name="rz_repay_quantity" title="融资偿还量" process="06706" attr="base"/>
+						<node name="rz_balance" title="融资余额" process="05080" attr="base"/>
+						<node name="rz_margin" title="融资余量" process="06707" attr="base"/>
+						<node name="rq_sell_money" title="融券卖出额" process="06708" attr="base"/>
+						<node name="rq_sell_quantity" title="融券卖出量" process="05081" attr="base"/>
+						<node name="rq_repay_money" title="融券偿还额" process="06709" attr="base"/>
+						<node name="rq_repay_quantity" title="融券偿还量" process="05082" attr="base"/>
+						<node name="rq_balance" title="融券余额" process="05084" attr="base"/>
+						<node name="rq_margin" title="融券余量" process="05083" attr="base"/>
+						<node name="rzrq_balance" title="融资融券余额" process="05085" attr="base"/>
+					</nodes>
+				</node>
+				<node name="_资金流向" title="资金流向" isgroup="true">
+					<nodes>
+						<node name="zd_buy_tdd_q" title="主动买入特大单量" process="06168" attr="base"/>
+						<node name="zd_buy_tdd_m" title="主动买入特大单金额" process="05211" attr="base"/>
+						<node name="bd_buy_tdd_q" title="被动买入特大单量" process="06169" attr="base"/>
+						<node name="bd_buy_tdd_m" title="被动买入特大单金额" process="05212" attr="base"/>
+						<node name="zd_sell_tdd_q" title="主动卖出特大量" process="06170" attr="base"/>
+						<node name="zd_sell_tdd_m" title="主动卖出特大单金额" process="05213" attr="base"/>
+						<node name="bd_sell_tdd_q" title="被动卖出特大单量" process="06171" attr="base"/>
+						<node name="bd_sell_tdd_m" title="被动卖出特大单金额" process="05214" attr="base"/>
+						<node name="zd_buy_dd_q" title="主动买入大单量" process="06172" attr="base"/>
+						<node name="zd_buy_dd_m" title="主动买入大单金额" process="05215" attr="base"/>
+						<node name="bd_buy_dd_q" title="被动买入大单量" process="06173" attr="base"/>
+						<node name="bd_buy_dd_m" title="被动买入大单金额" process="05216" attr="base"/>
+						<node name="zd_sell_dd_q" title="主动卖出大单量" process="06174" attr="base"/>
+						<node name="zd_sell_dd_m" title="主动卖出大单金额" process="05217" attr="base"/>
+						<node name="bd_sell_dd_q" title="被动卖出大单量" process="06175" attr="base"/>
+						<node name="bd_sell_dd_m" title="被动卖出大单金额" process="05218" attr="base"/>
+						<node name="zd_buy_zd_q" title="主动买入中单量" process="06176" attr="base"/>
+						<node name="zd_buy_zd_m" title="主动买入中单金额" process="05219" attr="base"/>
+						<node name="bd_buy_zd_q" title="被动买入中单量" process="06177" attr="base"/>
+						<node name="bd_buy_zd_m" title="被动买入中单金额" process="05220" attr="base"/>
+						<node name="zd_sell_zd_q" title="主动卖出中单量" process="06178" attr="base"/>
+						<node name="zd_sell_zd_m" title="主动卖出中单金额" process="05221" attr="base"/>
+						<node name="bd_sell_zd_q" title="被动卖出中单量" process="06179" attr="base"/>
+						<node name="bd_sell_zd_m" title="被动卖出中单金额" process="05222" attr="base"/>
+						<node name="buy_xd_q" title="小单买入量" process="06180" attr="base"/>
+						<node name="buy_xd_m" title="小单买入金额" process="05223" attr="base"/>
+						<node name="sell_xd_q" title="小单卖出量" process="06181" attr="base"/>
+						<node name="sell_xd_m" title="小单卖出金额" process="05224" attr="base"/>
+						<node name="dde_dd_nm" title="DDE大单净额" process="05225" attr="base"/>
+						<node name="dde_dd_nq" title="DDE大单净量" process="06348" attr="base"/>
+						<node name="dde_5days" title="5日DDE" process="06217" attr="base"/>
+						<node name="dde_10days" title="10日DDE" process="06218" attr="base"/>
+						<node name="dde_20days" title="20日DDE" process="06219" attr="base"/>
+						<node name="inflowrate" title="金额流入率" process="06149" attr="base"/>
+					</nodes>
+				</node>
+				<node name="_技术形态" title="技术形态" isgroup="true">
+					<nodes>
+						<node name="zs_lsxg" title="近期创历史新高" process="05096" attr="base">
+							<params>
+								<param name="Ndays" title="近N天内" type="dt_integer" default="3"/>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00071" default="100"/>
+							</params>
+						</node>
+						<node name="zs_lsxd" title="近期创历史新低" process="05097" attr="base">
+							<params>
+								<param name="Ndays" title="近N天内" type="dt_integer" default="3"/>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00071" default="100"/>
+							</params>
+						</node>
+						<node name="zs_jdxg" title="近期创阶段新高" process="03092" attr="base">
+							<params>
+								<param name="Ndays" title="近N天内" type="dt_integer" default="3"/>
+								<param name="Ndays_xg" title="创N天以来新高" type="dt_integer" default="60"/>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00071" default="100"/>
+							</params>
+						</node>
+						<node name="zs_jdxd" title="近期创阶段新低" process="03093" attr="base">
+							<params>
+								<param name="Ndays" title="近N天内" type="dt_integer" default="3"/>
+								<param name="Ndays_xd" title="创N天以来新低" type="dt_integer" default="60"/>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00071" default="100"/>
+							</params>
+						</node>
+						<node name="zs_lzdays" title="连涨天数" process="05098" attr="base"/>
+						<node name="zs_lddays" title="连跌天数" process="05099" attr="base"/>
+						<node name="zs_upMA" title="向上有效突破均线" process="05100" attr="base">
+							<params>
+								<param name="MA" title="均线" type="dt_integer" default="60"/>
+								<param name="tp_days" title="有效突破确认天数" type="dt_integer" default="3"/>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00071" default="100"/>
+							</params>
+						</node>
+						<node name="zs_downMA" title="向下有效突破均线" process="05101" attr="base">
+							<params>
+								<param name="MA" title="均线" type="dt_integer" default="60"/>
+								<param name="tp_days" title="有效突破确认天数" type="dt_integer" default="3"/>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00071" default="100"/>
+							</params>
+						</node>
+						<node name="dk_plMA" title="均线多空头排列看跌看涨" process="05102" attr="base">
+							<params>
+								<param name="MA1" title="均线1" type="dt_integer" default="5"/>
+								<param name="MA2" title="均线2" type="dt_integer" default="10"/>
+								<param name="MA3" title="均线3" type="dt_integer" default="20"/>
+								<param name="MA4" title="均线4" type="dt_integer" default="30"/>
+								<param name="callorput" title="看涨看跌" type="dt_integer" param_list="P00093" default="100"/>
+								<param name="fq_type" title="复权方式" type="dt_integer" param_list="P00071" default="100"/>
+							</params>
+						</node>
+					</nodes>
+				</node>
+				<node name="_资产负债表" title="资产负债表" isgroup="true">
+					<nodes>
+						<node name="_资产" title="资产" isgroup="true">
+							<nodes>
+								<node name="BS0001" title="货币资金" process="00993" attr="base"/>
+								<node name="BS0002" title="交易性金融资产" process="00994" attr="base"/>
+								<node name="BS0003" title="应收票据" process="00995" attr="base"/>
+								<node name="BS0004" title="应收账款" process="00996" attr="base"/>
+								<node name="BS0005" title="预付款项" process="00998" attr="base"/>
+								<node name="BS0006" title="应收利息" process="01000" attr="base"/>
+								<node name="BS0007" title="应收股利" process="00999" attr="base"/>
+								<node name="BS0008" title="其他应收款" process="00997" attr="base"/>
+								<node name="BS0009" title="存货" process="01001" attr="base"/>
+								<node name="BS0010" title="一年内到期的非流动资产" process="01004" attr="base"/>
+								<node name="BS0011" title="其他流动资产" process="01011" attr="base"/>
+								<node name="BS0012" title="流动资产特殊科目" process="05252" attr="base"/>
+								<node name="BS0013" title="流动资产平衡科目" process="05253" attr="base"/>
+								<node name="BS0014" title="流动资产合计" process="01012" attr="base"/>
+								<node name="BS0015" title="可供出售金融资产" process="01013" attr="base"/>
+								<node name="BS0016" title="持有至到期投资" process="01014" attr="base"/>
+								<node name="BS0017" title="长期应收款" process="01017" attr="base"/>
+								<node name="BS0018" title="长期股权投资" process="01016" attr="base"/>
+								<node name="BS0019" title="投资性房地产" process="01015" attr="base"/>
+								<node name="BS0020" title="固定资产" process="01018" attr="base"/>
+								<node name="BS0021" title="在建工程" process="01020" attr="base"/>
+								<node name="BS0022" title="工程物资" process="01019" attr="base"/>
+								<node name="BS0023" title="固定资产清理" process="01021" attr="base"/>
+								<node name="BS0024" title="生产性生物资产" process="01022" attr="base"/>
+								<node name="BS0025" title="油气资产" process="01023" attr="base"/>
+								<node name="BS0026" title="无形资产" process="01024" attr="base"/>
+								<node name="BS0027" title="开发支出" process="01025" attr="base"/>
+								<node name="BS0028" title="商誉" process="01026" attr="base"/>
+								<node name="BS0029" title="长期待摊费用" process="01027" attr="base"/>
+								<node name="BS0030" title="递延所得税资产" process="01028" attr="base"/>
+								<node name="BS0031" title="其他非流动资产" process="01030" attr="base"/>
+								<node name="BS0032" title="非流动资产特殊科目" process="05254" attr="base"/>
+								<node name="BS0033" title="非流动资产平衡科目" process="05255" attr="base"/>
+								<node name="BS0034" title="非流动资产合计" process="01031" attr="base"/>
+								<node name="BS0035" title="现金及存放中央银行款项" process="01278" attr="base"/>
+								<node name="BS0036" title="存放同业款项" process="01279" attr="base"/>
+								<node name="BS0037" title="贵金属" process="01280" attr="base"/>
+								<node name="BS0038" title="拆出资金" process="01006" attr="base"/>
+								<node name="BS0039" title="融出资金" process="07116" attr="base"/>
+								<node name="BS0040" title="衍生金融资产" process="01283" attr="base"/>
+								<node name="BS0041" title="买入返售金融资产" process="01010" attr="base"/>
+								<node name="BS0042" title="应收款项" process="07117" attr="base"/>
+								<node name="BS0043" title="发放贷款及垫款" process="01029" attr="base"/>
+								<node name="BS0044" title="其他资产" process="01296" attr="base"/>
+								<node name="BS0045" title="应收款项类投资" process="01291" attr="base"/>
+								<node name="BS0046" title="应收保费" process="01007" attr="base"/>
+								<node name="BS0047" title="应收代位追偿款" process="01730" attr="base"/>
+								<node name="BS0048" title="应收分保账款" process="01008" attr="base"/>
+								<node name="BS0049" title="应收分保合同准备金" process="01009" attr="base"/>
+								<node name="BS0050" title="应收分保未到期责任准备金" process="01732" attr="base"/>
+								<node name="BS0051" title="应收分保未决赔款准备金" process="01733" attr="base"/>
+								<node name="BS0052" title="应收分保寿险责任准备金" process="01734" attr="base"/>
+								<node name="BS0053" title="应收分保长期健康险责任准备金" process="01735" attr="base"/>
+								<node name="BS0054" title="保户质押贷款" process="01736" attr="base"/>
+								<node name="BS0055" title="定期存款" process="01746" attr="base"/>
+								<node name="BS0056" title="存出资本保证金" process="01740" attr="base"/>
+								<node name="BS0057" title="独立账户资产" process="01743" attr="base"/>
+								<node name="BS0058" title="客户存款" process="01500" attr="base"/>
+								<node name="BS0059" title="结算备付金" process="01005" attr="base"/>
+								<node name="BS0060" title="客户备付金" process="01502" attr="base"/>
+								<node name="BS0061" title="存出保证金" process="01508" attr="base"/>
+								<node name="BS0062" title="交易席位费" process="01515" attr="base"/>
+								<node name="BS0063" title="资产特殊科目" process="05256" attr="base"/>
+								<node name="BS0064" title="资产平衡科目" process="05257" attr="base"/>
+								<node name="BS0065" title="资产总计" process="01032" attr="base"/>
+							</nodes>
+						</node>
+						<node name="_负债" title="负债" isgroup="true">
+							<nodes>
+								<node name="BS0066" title="短期借款" process="01033" attr="base"/>
+								<node name="BS0067" title="应付短期融资款" process="07120" attr="base"/>
+								<node name="BS0068" title="吸收存款及同业存放" process="01049" attr="base"/>
+								<node name="BS0069" title="交易性金融负债" process="01034" attr="base"/>
+								<node name="BS0070" title="应付票据" process="01035" attr="base"/>
+								<node name="BS0071" title="应付账款" process="01036" attr="base"/>
+								<node name="BS0072" title="预收款项" process="01037" attr="base"/>
+								<node name="BS0073" title="应付职工薪酬" process="01038" attr="base"/>
+								<node name="BS0074" title="应交税费" process="01039" attr="base"/>
+								<node name="BS0075" title="应付款项" process="07121" attr="base"/>
+								<node name="BS0076" title="应付利息" process="01040" attr="base"/>
+								<node name="BS0077" title="应付股利" process="01041" attr="base"/>
+								<node name="BS0078" title="其他应付款" process="01042" attr="base"/>
+								<node name="BS0079" title="一年内到期的非流动负债" process="01046" attr="base"/>
+								<node name="BS0080" title="其他流动负债" process="01057" attr="base"/>
+								<node name="BS0081" title="流动负债特殊科目" process="05258" attr="base"/>
+								<node name="BS0082" title="流动负债平衡科目" process="05259" attr="base"/>
+								<node name="BS0083" title="流动负债合计" process="01058" attr="base"/>
+								<node name="BS0084" title="长期借款" process="01059" attr="base"/>
+								<node name="BS0085" title="应付债券" process="01060" attr="base"/>
+								<node name="BS0086" title="长期应付款" process="01061" attr="base"/>
+								<node name="BS0087" title="专项应付款" process="01062" attr="base"/>
+								<node name="BS0088" title="预计负债" process="01044" attr="base"/>
+								<node name="BS0089" title="递延所得税负债" process="01064" attr="base"/>
+								<node name="BS0090" title="其他非流动负债" process="01066" attr="base"/>
+								<node name="BS0091" title="非流动负债递延收益" process="01065" attr="base"/>
+								<node name="BS0092" title="应付短期债券" process="01047" attr="base"/>
+								<node name="BS0093" title="流动负债递延收益" process="01045" attr="base"/>
+								<node name="BS0094" title="非流动负债特殊科目" process="05260" attr="base"/>
+								<node name="BS0095" title="非流动负债平衡科目" process="05261" attr="base"/>
+								<node name="BS0096" title="非流动负债合计" process="01067" attr="base"/>
+								<node name="BS0097" title="向中央银行借款" process="01048" attr="base"/>
+								<node name="BS0098" title="同业及其他金融机构存放款项" process="01298" attr="base"/>
+								<node name="BS0099" title="存入保证金" process="01762" attr="base"/>
+								<node name="BS0100" title="拆入资金" process="01050" attr="base"/>
+								<node name="BS0101" title="衍生金融负债" process="01302" attr="base"/>
+								<node name="BS0102" title="卖出回购金融资产款" process="01051" attr="base"/>
+								<node name="BS0103" title="吸收存款" process="01304" attr="base"/>
+								<node name="BS0104" title="其他负债" process="01312" attr="base"/>
+								<node name="BS0105" title="预收保费" process="01754" attr="base"/>
+								<node name="BS0106" title="应付手续费及佣金" process="01052" attr="base"/>
+								<node name="BS0107" title="应付分保账款" process="01053" attr="base"/>
+								<node name="BS0108" title="应付赔付款" process="01760" attr="base"/>
+								<node name="BS0109" title="应付保单红利" process="01761" attr="base"/>
+								<node name="BS0110" title="保户储金及投资款" process="01763" attr="base"/>
+								<node name="BS0111" title="保险合同准备金" process="01054" attr="base"/>
+								<node name="BS0112" title="未到期责任准备金" process="01764" attr="base"/>
+								<node name="BS0113" title="未决赔款准备金" process="01765" attr="base"/>
+								<node name="BS0114" title="寿险责任准备金" process="01766" attr="base"/>
+								<node name="BS0115" title="长期健康险责任准备金" process="01767" attr="base"/>
+								<node name="BS0116" title="独立账户负债" process="01770" attr="base"/>
+								<node name="BS0117" title="质押借款" process="01521" attr="base"/>
+								<node name="BS0118" title="代理买卖证券款" process="01055" attr="base"/>
+								<node name="BS0119" title="代理承销证券款" process="01056" attr="base"/>
+								<node name="BS0120" title="负债特殊科目" process="05262" attr="base"/>
+								<node name="BS0121" title="负债平衡科目" process="05263" attr="base"/>
+								<node name="BS0122" title="负债合计" process="01068" attr="base"/>
+							</nodes>
+						</node>
+						<node name="_所有者权益" title="所有者权益" isgroup="true">
+							<nodes>
+								<node name="BS0123" title="实收资本(或股本)" process="01069" attr="base"/>
+								<node name="BS0124" title="资本公积" process="01070" attr="base"/>
+								<node name="BS0125" title="库存股" process="01073" attr="base"/>
+								<node name="BS0126" title="专项储备" process="06246" attr="base"/>
+								<node name="BS0127" title="盈余公积" process="01071" attr="base"/>
+								<node name="BS0128" title="一般风险准备" process="01074" attr="base"/>
+								<node name="BS0129" title="交易风险准备" process="06247" attr="base"/>
+								<node name="BS0130" title="未分配利润" process="01072" attr="base"/>
+								<node name="BS0131" title="外币报表折算差额" process="01075" attr="base"/>
+								<node name="BS0132" title="股东权益特殊科目" process="05264" attr="base"/>
+								<node name="BS0133" title="股东权益平衡科目" process="05265" attr="base"/>
+								<node name="BS0134" title="归属于母公司所有者权益合计" process="01078" attr="base"/>
+								<node name="BS0135" title="少数股东权益" process="01077" attr="base"/>
+								<node name="BS0136" title="所有者权益合计" process="01079" attr="base"/>
+								<node name="BS0137" title="负债和所有者权益总计" process="01080" attr="base"/>
+							</nodes>
+						</node>
+					</nodes>
+				</node>
+				<node name="_利润表" title="利润表" isgroup="true">
+					<nodes>
+						<node name="IS0001" title="营业总收入" process="01081" attr="base"/>
+						<node name="IS0002" title="营业收入" process="01082" attr="base"/>
+						<node name="IS0003" title="利息净收入" process="01327" attr="base"/>
+						<node name="IS0004" title="利息收入" process="01083" attr="base"/>
+						<node name="IS0005" title="利息支出" process="01088" attr="base"/>
+						<node name="IS0006" title="手续费及佣金净收入" process="01330" attr="base"/>
+						<node name="IS0007" title="手续费及佣金收入" process="01085" attr="base"/>
+						<node name="IS0008" title="手续费及佣金支出" process="01089" attr="base"/>
+						<node name="IS0009" title="其他业务收入" process="01560" attr="base"/>
+						<node name="IS0010" title="已赚保费" process="01084" attr="base"/>
+						<node name="IS0011" title="保险业务收入" process="01789" attr="base"/>
+						<node name="IS0012" title="分保费收入" process="01790" attr="base"/>
+						<node name="IS0013" title="分出保费" process="01791" attr="base"/>
+						<node name="IS0014" title="提取未到期责任准备金" process="01792" attr="base"/>
+						<node name="IS0015" title="经纪业务手续费净收入" process="01552" attr="base"/>
+						<node name="IS0016" title="投资银行业务手续费净收入" process="01553" attr="base"/>
+						<node name="IS0017" title="资产管理业务手续费净收入" process="01554" attr="base"/>
+						<node name="IS0018" title="营业总收入特殊科目" process="05266" attr="base"/>
+						<node name="IS0019" title="营业总收入平衡科目" process="05267" attr="base"/>
+						<node name="IS0020" title="营业总成本" process="01086" attr="base"/>
+						<node name="IS0021" title="营业成本" process="01087" attr="base"/>
+						<node name="IS0022" title="营业税金及附加" process="01090" attr="base"/>
+						<node name="IS0023" title="销售费用" process="01091" attr="base"/>
+						<node name="IS0024" title="管理费用" process="01092" attr="base"/>
+						<node name="IS0025" title="财务费用" process="01093" attr="base"/>
+						<node name="IS0026" title="资产减值损失" process="01094" attr="base"/>
+						<node name="IS0027" title="营业支出" process="01338" attr="base"/>
+						<node name="IS0028" title="业务及管理费" process="05104" attr="base"/>
+						<node name="IS0029" title="其他业务成本" process="01565" attr="base"/>
+						<node name="IS0030" title="退保金" process="01095" attr="base"/>
+						<node name="IS0031" title="赔付支出" process="01096" attr="base"/>
+						<node name="IS0032" title="摊回赔付支出" process="01801" attr="base"/>
+						<node name="IS0033" title="提取保险责任准备金" process="01097" attr="base"/>
+						<node name="IS0034" title="摊回保险责任准备金" process="01803" attr="base"/>
+						<node name="IS0035" title="保单红利支出" process="01098" attr="base"/>
+						<node name="IS0036" title="分保费用" process="01099" attr="base"/>
+						<node name="IS0037" title="摊回分保费用" process="01809" attr="base"/>
+						<node name="IS0038" title="营业总成本特殊科目" process="05268" attr="base"/>
+						<node name="IS0039" title="营业总成本平衡科目" process="05269" attr="base"/>
+						<node name="IS0040" title="公允价值变动收益" process="01100" attr="base"/>
+						<node name="IS0041" title="投资收益" process="01101" attr="base"/>
+						<node name="IS0042" title="对联营企业和合营企业的投资收益" process="01102" attr="base"/>
+						<node name="IS0043" title="汇兑收益" process="01103" attr="base"/>
+						<node name="IS0044" title="营业利润" process="01104" attr="base"/>
+						<node name="IS0045" title="营业外收入" process="01105" attr="base"/>
+						<node name="IS0046" title="营业外支出" process="01106" attr="base"/>
+						<node name="IS0047" title="非流动资产处置损失" process="01107" attr="base"/>
+						<node name="IS0048" title="营业利润特殊科目" process="05270" attr="base"/>
+						<node name="IS0049" title="营业利润平衡科目" process="05271" attr="base"/>
+						<node name="IS0050" title="利润总额" process="01108" attr="base"/>
+						<node name="IS0051" title="所得税费用" process="01109" attr="base"/>
+						<node name="IS0052" title="利润总额特殊科目" process="05272" attr="base"/>
+						<node name="IS0053" title="利润总额平衡科目" process="05273" attr="base"/>
+						<node name="IS0054" title="净利润" process="01111" attr="base"/>
+						<node name="IS0055" title="归属于母公司股东的净利润" process="01113" attr="base"/>
+						<node name="IS0056" title="少数股东损益" process="01112" attr="base"/>
+						<node name="IS0057" title="净利润特殊科目" process="05274" attr="base"/>
+						<node name="IS0058" title="净利润平衡科目" process="05275" attr="base"/>
+						<node name="IS0059" title="基本每股收益" process="01114" attr="base"/>
+						<node name="IS0060" title="稀释每股收益" process="01115" attr="base"/>
+						<node name="IS0061" title="其他综合收益" process="05088" attr="base"/>
+						<node name="IS0062" title="综合收益总额" process="05091" attr="base"/>
+						<node name="IS0063" title="归属于母公司股东的综合收益总额" process="05090" attr="base"/>
+						<node name="IS0064" title="归属于少数股东的综合收益总额" process="05089" attr="base"/>
+					</nodes>
+				</node>
+				<node name="_现金流量表" title="现金流量表" isgroup="true">
+					<nodes>
+						<node name="CFS0001" title="销售商品、提供劳务收到的现金" process="01116" attr="base"/>
+						<node name="CFS0002" title="收到的税费返还" process="01117" attr="base"/>
+						<node name="CFS0003" title="收到其他与经营活动有关的现金" process="01118" attr="base"/>
+						<node name="CFS0004" title="客户存款和同业存放款项净增加额" process="01353" attr="base"/>
+						<node name="CFS0005" title="向中央银行借款净增加额" process="01354" attr="base"/>
+						<node name="CFS0006" title="向其他金融机构拆入资金净增加额" process="01355" attr="base"/>
+						<node name="CFS0007" title="收取利息、手续费及佣金的现金" process="01356" attr="base"/>
+						<node name="CFS0008" title="收到原保险合同保费取得的现金" process="01824" attr="base"/>
+						<node name="CFS0009" title="收到再保业务现金净额" process="01825" attr="base"/>
+						<node name="CFS0010" title="保户储金及投资款净增加额" process="01846" attr="base"/>
+						<node name="CFS0011" title="处置交易性金融资产净增加额" process="01578" attr="base"/>
+						<node name="CFS0012" title="拆入资金净增加额" process="01581" attr="base"/>
+						<node name="CFS0013" title="回购业务资金净增加额" process="01582" attr="base"/>
+						<node name="CFS0014" title="融出资金净减少额" process="07122" attr="base"/>
+						<node name="CFS0015" title="代理买卖证券收到的现金净额" process="07123" attr="base"/>
+						<node name="CFS0016" title="经营活动现金流入特殊科目" process="05276" attr="base"/>
+						<node name="CFS0017" title="经营活动现金流入平衡科目" process="05277" attr="base"/>
+						<node name="CFS0018" title="经营活动现金流入小计" process="01119" attr="base"/>
+						<node name="CFS0019" title="购买商品、接受劳务支付的现金" process="01120" attr="base"/>
+						<node name="CFS0020" title="支付给职工以及为职工支付的现金" process="01121" attr="base"/>
+						<node name="CFS0021" title="支付的各项税费" process="01122" attr="base"/>
+						<node name="CFS0022" title="支付其他与经营活动有关的现金" process="01123" attr="base"/>
+						<node name="CFS0023" title="客户贷款及垫款净增加额" process="01359" attr="base"/>
+						<node name="CFS0024" title="存放中央银行和同业款项净增加额" process="01360" attr="base"/>
+						<node name="CFS0025" title="支付利息、手续费及佣金的现金" process="06546" attr="base"/>
+						<node name="CFS0026" title="支付原保险合同赔付款项的现金" process="01828" attr="base"/>
+						<node name="CFS0027" title="支付手续费及佣金的现金" process="01829" attr="base"/>
+						<node name="CFS0028" title="融出资金净增加额" process="07124" attr="base"/>
+						<node name="CFS0029" title="代理买卖证券支付的现金净额" process="07125" attr="base"/>
+						<node name="CFS0030" title="支付保单红利的现金" process="06468" attr="base"/>
+						<node name="CFS0031" title="经营活动现金流出特殊科目" process="05278" attr="base"/>
+						<node name="CFS0032" title="经营活动现金流出平衡科目" process="05279" attr="base"/>
+						<node name="CFS0033" title="经营活动现金流出小计" process="01124" attr="base"/>
+						<node name="CFS0034" title="经营活动产生的现金流量净额特殊科目" process="06136" attr="base"/>
+						<node name="CFS0035" title="经营活动产生的现金流量净额平衡科目" process="05280" attr="base"/>
+						<node name="CFS0036" title="经营活动产生的现金流量净额" process="01125" attr="base"/>
+						<node name="CFS0037" title="收回投资收到的现金" process="01126" attr="base"/>
+						<node name="CFS0038" title="取得投资收益收到的现金" process="01127" attr="base"/>
+						<node name="CFS0039" title="处置固定资产、无形资产和其他长期资产收回的现金净额" process="01128" attr="base"/>
+						<node name="CFS0040" title="处置子公司及其他营业单位收到的现金净额" process="01129" attr="base"/>
+						<node name="CFS0041" title="收到其他与投资活动有关的现金" process="01130" attr="base"/>
+						<node name="CFS0042" title="投资活动现金流入特殊科目" process="05281" attr="base"/>
+						<node name="CFS0043" title="投资活动现金流入平衡科目" process="05282" attr="base"/>
+						<node name="CFS0044" title="投资活动现金流入小计" process="01131" attr="base"/>
+						<node name="CFS0045" title="购建固定资产、无形资产和其他长期资产支付的现金" process="01132" attr="base"/>
+						<node name="CFS0046" title="投资支付的现金" process="01133" attr="base"/>
+						<node name="CFS0047" title="取得子公司及其他营业单位支付的现金净额" process="01134" attr="base"/>
+						<node name="CFS0048" title="支付其他与投资活动有关的现金" process="01135" attr="base"/>
+						<node name="CFS0049" title="质押贷款净增加额" process="01839" attr="base"/>
+						<node name="CFS0050" title="投资活动现金流出特殊科目" process="05283" attr="base"/>
+						<node name="CFS0051" title="投资活动现金流出平衡科目" process="05284" attr="base"/>
+						<node name="CFS0052" title="投资活动现金流出小计" process="01136" attr="base"/>
+						<node name="CFS0053" title="投资活动产生的现金流量净额特殊科目" process="06137" attr="base"/>
+						<node name="CFS0054" title="投资活动产生的现金流量净额平衡科目" process="05285" attr="base"/>
+						<node name="CFS0055" title="投资活动产生的现金流量净额" process="01137" attr="base"/>
+						<node name="CFS0056" title="吸收投资收到的现金" process="01138" attr="base"/>
+						<node name="CFS0057" title="子公司吸收少数股东投资收到的现金" process="01139" attr="base"/>
+						<node name="CFS0058" title="取得借款收到的现金" process="01140" attr="base"/>
+						<node name="CFS0059" title="收到其他与筹资活动有关的现金" process="01141" attr="base"/>
+						<node name="CFS0060" title="发行债券收到的现金" process="01142" attr="base"/>
+						<node name="CFS0061" title="筹资活动现金流入特殊科目" process="05286" attr="base"/>
+						<node name="CFS0062" title="筹资活动现金流入平衡科目" process="05287" attr="base"/>
+						<node name="CFS0063" title="筹资活动现金流入小计" process="01143" attr="base"/>
+						<node name="CFS0064" title="偿还债务支付的现金" process="01144" attr="base"/>
+						<node name="CFS0065" title="分配股利、利润或偿付利息支付的现金" process="01145" attr="base"/>
+						<node name="CFS0066" title="子公司支付给少数股东的股利" process="01146" attr="base"/>
+						<node name="CFS0067" title="支付其他与筹资活动有关的现金" process="01147" attr="base"/>
+						<node name="CFS0068" title="筹资活动现金流出特殊科目" process="05288" attr="base"/>
+						<node name="CFS0069" title="筹资活动现金流出平衡科目" process="05289" attr="base"/>
+						<node name="CFS0070" title="筹资活动现金流出小计" process="01148" attr="base"/>
+						<node name="CFS0071" title="筹资活动产生的现金流量净额特殊科目" process="06138" attr="base"/>
+						<node name="CFS0072" title="筹资活动产生的现金流量净额平衡科目" process="05290" attr="base"/>
+						<node name="CFS0073" title="筹资活动产生的现金流量净额" process="01149" attr="base"/>
+						<node name="CFS0074" title="汇率变动对现金及现金等价物的影响" process="01150" attr="base"/>
+						<node name="CFS0075" title="现金及现金等价物净增加额" process="01151" attr="base"/>
+						<node name="CFS0076" title="直接法-现金及现金等价物净增加额特殊科目" process="05291" attr="base"/>
+						<node name="CFS0077" title="直接法-现金及现金等价物净增加额平衡科目" process="05292" attr="base"/>
+						<node name="CFS0078" title="期初现金及现金等价物余额" process="01152" attr="base"/>
+						<node name="CFS0079" title="期末现金及现金等价物余额" process="01153" attr="base"/>
+						<node name="CFS0080" title="净利润" process="01154" attr="base"/>
+						<node name="CFS0081" title="资产减值准备" process="01155" attr="base"/>
+						<node name="CFS0082" title="固定资产折旧、油气资产折耗、生产性生物资产折旧" process="01156" attr="base"/>
+						<node name="CFS0083" title="无形资产摊销" process="01157" attr="base"/>
+						<node name="CFS0084" title="长期待摊费用摊销" process="01158" attr="base"/>
+						<node name="CFS0085" title="处置固定资产、无形资产和其他长期资产的损失" process="01161" attr="base"/>
+						<node name="CFS0086" title="固定资产报废损失" process="01162" attr="base"/>
+						<node name="CFS0087" title="公允价值变动损失" process="01163" attr="base"/>
+						<node name="CFS0088" title="财务费用" process="01164" attr="base"/>
+						<node name="CFS0089" title="投资损失" process="01165" attr="base"/>
+						<node name="CFS0090" title="递延所得税资产减少" process="01166" attr="base"/>
+						<node name="CFS0091" title="递延所得税负债增加" process="01167" attr="base"/>
+						<node name="CFS0092" title="存货的减少" process="01168" attr="base"/>
+						<node name="CFS0093" title="经营性应收项目的减少" process="01169" attr="base"/>
+						<node name="CFS0094" title="经营性应付项目的增加" process="01170" attr="base"/>
+						<node name="CFS0095" title="其他" process="01172" attr="base"/>
+						<node name="CFS0096" title="间接法-经营活动现金流量净额特殊科目" process="05764" attr="base"/>
+						<node name="CFS0097" title="间接法-经营活动现金流量净额平衡科目" process="05765" attr="base"/>
+						<node name="CFS0098" title="间接法-经营活动产生的现金流量净额" process="01173" attr="base"/>
+						<node name="CFS0099" title="债务转为资本" process="01174" attr="base"/>
+						<node name="CFS0100" title="一年内到期的可转换公司债券" process="01175" attr="base"/>
+						<node name="CFS0101" title="融资租入固定资产" process="01176" attr="base"/>
+						<node name="CFS0102" title="现金的期末余额" process="01177" attr="base"/>
+						<node name="CFS0103" title="现金的期初余额" process="01178" attr="base"/>
+						<node name="CFS0104" title="现金等价物的期末余额" process="01179" attr="base"/>
+						<node name="CFS0105" title="现金等价物的期初余额" process="01180" attr="base"/>
+						<node name="CFS0106" title="间接法-现金及现金等价物净增加额特殊科目" process="05293" attr="base"/>
+						<node name="CFS0107" title="间接法-现金及现金等价物净增加额平衡科目" process="05294" attr="base"/>
+						<node name="CFS0108" title="间接法-现金及现金等价物净增加额" process="01181" attr="base"/>
+					</nodes>
+				</node>
+				<node name="_估值指标" title="估值指标" isgroup="true">
+					<nodes>
+						<node name="gz_pe" title="市盈率(PE)" process="00577" attr="base">
+							<params>
+								<param name="matchingrules" title="财务数据匹配规则" type="dt_integer" param_list="P00035" default="102"/>
+							</params>
+						</node>
+						<node name="gz_pe_ttm" title="市盈率(PE，TTM)" process="04357" attr="base">
+							<params>
+								<param name="ttmdate" title="TTM基准日" type="dt_integer" param_list="P00192" default="100"/>
+							</params>
+						</node>
+						<node name="gz_pe_hp" title="预测市盈率(PE，历史预测)" process="00579" attr="base">
+							<params>
+								<param name="year" title="年度" type="dt_integer" param_list="P00123" default="2014"/>
+							</params>
+						</node>
+						<node name="gz_pe_12m" title="预测市盈率(PE，未来12个月)" process="00581" attr="base"/>
+						<node name="gz_pe_static" title="静态市盈率(中证发布)" process="05761" attr="base"/>
+						<node name="gz_pe_roll" title="滚动市盈率(中证发布)" process="05967" attr="base"/>
+						<node name="gz_pb" title="市净率(PB)" process="00584" attr="base">
+							<params>
+								<param name="matchingrules" title="财务数据匹配规则" type="dt_integer" param_list="P00033" default="104"/>
+							</params>
+						</node>
+						<node name="gz_pb_zz" title="市净率(中证发布)" process="05968" attr="base"/>
+						<node name="gz_pb_latest" title="市净率(PB，最新)" process="00585" attr="base">
+							<params>
+								<param name="datum" title="基准日" type="dt_integer" param_list="P00192" default="100"/>
+							</params>
+						</node>
+						<node name="gz_pcf_ocf" title="市现率(PCF，经营现金流)" process="00586" attr="base">
+							<params>
+								<param name="matchingrules" title="财务数据匹配规则" type="dt_integer" param_list="P00035" default="101"/>
+							</params>
+						</node>
+						<node name="gz_pcf_ocfttm" title="市现率(PCF，经营现金流TTM)" process="04358" attr="base">
+							<params>
+								<param name="ttmdate" title="TTM基准日" type="dt_integer" param_list="P00192" default="100"/>
+							</params>
+						</node>
+						<node name="gz_pcf_ncf" title="市现率(PCF，现金净流量)" process="00587" attr="base">
+							<params>
+								<param name="matchingrules" title="财务数据匹配规则" type="dt_integer" param_list="P00035" default="101"/>
+							</params>
+						</node>
+						<node name="gz_pcf_ncfttm" title="市现率(PCF，现金净流量TTM)" process="04359" attr="base">
+							<params>
+								<param name="ttmdate" title="TTM基准日" type="dt_integer" param_list="P00192" default="100"/>
+							</params>
+						</node>
+						<node name="gz_ps" title="市销率(PS)" process="00588" attr="base">
+							<params>
+								<param name="matchingrules" title="财务数据匹配规则" type="dt_integer" param_list="P00035" default="101"/>
+							</params>
+						</node>
+						<node name="gz_ps_ttm" title="市销率(PS，TTM)" process="04360" attr="base">
+							<params>
+								<param name="ttmdate" title="TTM基准日" type="dt_integer" param_list="P00192" default="100"/>
+							</params>
+						</node>
+						<node name="gz_dy" title="股息率(股票获利率)" process="00601" attr="base">
+							<params>
+								<param name="year" title="年度" type="dt_integer" param_list="P10033" default="2014"/>
+							</params>
+						</node>
+						<node name="gz_tmv" title="总市值" process="00589" attr="base"/>
+						<node name="gz_tmv_fs" title="总市值(面向证券)" process="06245" attr="base"/>
+						<node name="gz_tmv_csrc" title="总市值(证监会算法)" process="00590" attr="base"/>
+						<node name="gz_cmv" title="流通市值" process="06373" attr="base"/>
+						<node name="gz_ev" title="股权价值" process="00597" attr="base"/>
+						<node name="gz_ev1" title="企业价值(含货币资金)" process="00598" attr="base"/>
+						<node name="gz_ev2" title="企业价值(剔除货币资金)" process="00599" attr="base"/>
+						<node name="enterpriseMultiple" title="企业倍数" process="00600" attr="base"/>
+					</nodes>
+				</node>
+			</nodes>
+		</node>
+	</nodes>
+</node>

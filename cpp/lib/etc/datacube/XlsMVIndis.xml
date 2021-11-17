@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="gbk"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<node>
+	<nodes>
+		<node name="_高频指标库" title="高频指标库" isgroup="true">
+			<nodes>
+				<node name="_基本行情" title="基本行情" isgroup="true">
+					<nodes>
+						<node name="open" title="开盘价" othername="open" process="2001" attr="base">
+						</node>
+						<node name="high" title="最高价" othername="high" process="2002" attr="base">
+						</node>
+						<node name="low" title="最低价" othername="low" process="2003" attr="base">
+						</node>
+						<node name="close" title="收盘价" othername="close" process="2004" attr="base">
+						</node>
+						<node name="avgprice" title="均价" othername="avgPrice" process="2013" attr="base">
+						</node>
+						<node name="wgtAvgYTM" title="加权平均到期收益率（仅适用于回购）" othername="wgtAvgYTM" process="2016" attr="base">
+						</node>
+						<node name="volume" title="成交量" othername="volume" process="2005" attr="base">
+						</node>
+						<node name="amt" title="成交额" othername="amount" process="2006" attr="base">
+						</node>
+						<node name="chg" title="涨跌" othername="change" process="2007" attr="base">
+						</node>
+						<node name="pct_chg" title="涨跌幅" othername="changeRatio" process="2008" attr="base">
+						</node>
+						<node name="ex_chg" title="换手率" othername="turnoverRatio" process="2009" attr="base">
+						</node>
+						<node name="np" title="内盘" othername="sellVolume" process="2010" attr="base">
+						</node>
+						<node name="wp" title="外盘" othername="buyVolume" process="2011" attr="base">
+						</node>
+						<node name="oi" title="持仓量" othername="openInterest" process="2012" attr="base">
+						</node>
+						<node name="buy_amt" title="买入金额" othername="buyAmount" process="2014" attr="base">
+						</node>
+						<node name="sell_amt" title="卖出金额" othername="sellAmount" process="2015" attr="base">
+						</node>
+						<node name="changeRatio_accumulated" title="涨跌幅(累计)" othername="changeRatio_accumulated" process="2016" attr="base">
+						</node>
+						<node name="changeRatio_periodical" title="涨跌幅(阶段)" othername="changeRatio_periodical" process="2017" attr="base">
+						</node>
+					</nodes>
+				</node>
+				<node name="_逐笔行情" title="逐笔行情" isgroup="true">
+					<nodes>
+						<node name="zb_time" othername="transTime" title="逐笔交易时间" process="3001" attr="specific">
+						</node>
+						<node name="zb_price" othername="transPrice" title="逐笔交易价" process="3002" attr="specific">
+						</node>
+						<node name="zb_volume" othername="transVolume" title="逐笔交易量" process="3003" attr="specific">
+						</node>
+						<node name="zb_type" othername="transType" title="逐笔交易类型" process="3004" attr="specific">
+						</node>
+					</nodes>
+				</node>
+				<node name="_技术指标" title="技术指标" isgroup="true">
+					<nodes>
+						<node name="BBI" title="BBI多空指数" process="1001" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="3"/>
+								<param name="day2" title="周期2" type="dt_integer" default="6"/>
+								<param name="day3" title="周期3" type="dt_integer" default="12"/>
+								<param name="day4" title="周期4" type="dt_integer" default="24"/>
+							</params>
+						</node>
+						<node name="DDI" title="DDI方向标准离差指数" process_depends="Option" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="13"/>
+								<param name="day2" title="周期2" type="dt_integer" default="30"/>
+								<param name="Adjusted-Factor" title="平滑因子" type="dt_integer" default="10"/>
+								<param name="day3" title="周期3" type="dt_integer" default="5"/>
+								<param name="Option" title="DDI指标选项" type="dt_integer" param_list="P10001" default="1"/>
+							</params>
+						</node>
+						<node name="DMA" title="DMA平均线差" process_depends="Option" attr="index">
+							<params>
+								<param name="Short-term-days" title="短周期" type="dt_integer" default="10"/>
+								<param name="long-term-days" title="长周期" type="dt_integer" default="50"/>
+								<param name="day" title="周期" type="dt_integer" default="10"/>
+								<param name="Option" title="DMA指标选项" type="dt_integer" param_list="P10002" default="1"/>
+							</params>
+						</node>
+						<node name="MA" title="MA简单移动平均" process="1015" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="5"/>
+							</params>
+						</node>
+						<node name="EXPMA" title="EXPMA指数平均数" process="1016" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="5"/>
+							</params>
+						</node>
+						<node name="MACD" title="MACD指数平滑异同平均" process_depends="Option" attr="index">
+							<params>
+								<param name="Short-term-days" title="短周期" type="dt_integer" default="12"/>
+								<param name="long-term-days" title="长周期" type="dt_integer" default="26"/>
+								<param name="day" title="周期" type="dt_integer" default="9"/>
+								<param name="Option" title="MCAD指标选项" type="dt_integer" param_list="P10003" default="1"/>
+							</params>
+						</node>
+						<node name="MTM" title="MTM动力指标" process_depends="Option" attr="index">
+							<params>
+								<param name="Interval-number" title="间隔周期" type="dt_integer" default="6"/>
+								<param name="day" title="周期" type="dt_integer" default="6"/>
+								<param name="Option" title="MTM指标选项" type="dt_integer" param_list="P10004" default="1"/>
+							</params>
+						</node>
+						<node name="PRICEOSC" title="PRICEOSC价格振荡指标" process="1012" attr="index">
+							<params>
+								<param name="Short-term-days" title="短周期" type="dt_integer" default="12"/>
+								<param name="long-term-days" title="长周期" type="dt_integer" default="26"/>
+							</params>
+						</node>
+						<node name="TRIX" title="TRIX三重指数平滑平均" process_depends="Option" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="12"/>
+								<param name="day2" title="周期2" type="dt_integer" default="20"/>
+								<param name="Option" title="TRIX指标选项" type="dt_integer" param_list="P10005" default="1"/>
+							</params>
+						</node>
+						<node name="BIAS" title="BIAS乖离率" process="1036" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="12"/>
+							</params>
+						</node>
+						<node name="CCI" title="CCI顺势指标" process="1017" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="14"/>
+							</params>
+						</node>
+						<node name="DBCD" title="DBCD异同离差乖离率" process_depends="Option" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="5"/>
+								<param name="day2" title="周期2" type="dt_integer" default="16"/>
+								<param name="day3" title="周期3" type="dt_integer" default="76"/>
+								<param name="Option" title="DBCD指标选项" type="dt_integer" param_list="P10006" default="1"/>
+							</params>
+						</node>
+						<node name="DPO" title="DPO区间震荡线" process_depends="Option" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="20"/>
+								<param name="day2" title="周期2" type="dt_integer" default="6"/>
+								<param name="Option" title="DPO指标选项" type="dt_integer" param_list="P10007" default="1"/>
+							</params>
+						</node>
+						<node name="KDJ" title="KDJ随机指标" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="9"/>
+								<param name="day1" title="周期1" type="dt_integer" default="3"/>
+								<param name="day2" title="周期2" type="dt_integer" default="3"/>
+								<param name="Option" title="KDJ指标选项" type="dt_integer" param_list="P10008" default="1"/>
+							</params>
+						</node>
+						<node name="LWR" title="LWR威廉指标" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="9"/>
+								<param name="day1" title="周期1" type="dt_integer" default="3"/>
+								<param name="day2" title="周期2" type="dt_integer" default="3"/>
+								<param name="Option" title="LWR指标选项" type="dt_integer" param_list="P10009" default="1"/>
+							</params>
+						</node>
+						<node name="ROC" title="ROC变动速率" process_depends="Option" attr="index">
+							<params>
+								<param name="Interval-number" title="间隔周期" type="dt_integer" default="12"/>
+								<param name="day" title="周期" type="dt_integer" default="6"/>
+								<param name="Option" title="ROC指标选项" type="dt_integer" param_list="P10010" default="1"/>
+							</params>
+						</node>
+						<node name="RSI" title="RSI相对强弱指标" process="1102" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="6"/>
+							</params>
+						</node>
+						<node name="SI" title="SI摆动指标" process="1029" attr="index">	
+						</node>
+						<node name="SRDM" title="SRDM动向速度比率" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="30"/>
+								<param name="Option" title="SLOWKD指标选项" type="dt_integer" param_list="P10011" default="1"/>
+							</params>
+						</node>
+						<node name="VROC" title="VROC量变动速率" process="1032" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="12"/>
+							</params>
+						</node>
+						<node name="VRSI" title="VRSI量相对强弱" process="1034" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="6"/>
+							</params>
+						</node>
+						<node name="WR" title="WR威廉指标" process="1035" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="14"/>
+							</params>
+						</node>
+						<node name="ARBR" title="ARBR人气意愿指标" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="26"/>
+								<param name="Option" title="ARBR指标选项" type="dt_integer" param_list="P10012" default="1"/>
+							</params>
+						</node>
+						<node name="CR" title="CR能量指标" process="1039" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="26"/>
+							</params>
+						</node>
+						<node name="PSY" title="PSY心理指标" process_depends="Option" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="12"/>
+								<param name="day2" title="周期2" type="dt_integer" default="6"/>
+								<param name="Option" title="PSY指标选项" type="dt_integer" param_list="P10013" default="1"/>
+							</params>
+						</node>
+						<node name="VR" title="VR成交量比率" process="1042" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="26"/>
+							</params>
+						</node>
+						<node name="WAD" title="WAD威廉聚散指标" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="30"/>
+								<param name="Option" title="WAD指标选项" type="dt_integer" param_list="P10014" default="1"/>
+							</params>
+						</node>
+						<node name="MFI" title="MFI资金流向指标" process="1045" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="14"/>
+							</params>
+						</node>
+						<node name="OBV" title="OBV能量潮" process_depends="Option" attr="index">
+							<params>
+								<param name="Option" title="OBV指标选项" type="dt_integer" param_list="P10015" default="1"/>
+							</params>
+						</node>
+						<node name="PVT" title="PVT量价趋势指标" process="1048" attr="index">	
+						</node>
+						<node name="WVAD" title="WVAD威廉变异离散量" process_depends="Option" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="24"/>
+								<param name="day2" title="周期2" type="dt_integer" default="6"/>
+								<param name="Option" title="WVAD指标选项" type="dt_integer" param_list="P10016" default="1"/>
+							</params>
+						</node>
+						<node name="BBIBOLL" title="BBIBOLL多空布林线" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="10"/>
+								<param name="Broadband" title="宽带" type="dt_integer" default="3"/>
+								<param name="Option" title="BBIBOLL指标选项" type="dt_integer" param_list="P10017" default="1"/>
+							</params>
+						</node>
+						<node name="BOLL" title="BOLL布林线" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="26"/>
+								<param name="Broadband" title="宽带" type="dt_integer" default="2"/>
+								<param name="Option" title="BOLL指标选项" type="dt_integer" param_list="P10030" default="1"/>
+							</params>
+						</node>
+						<node name="CDP" title="CDP逆势操作" process_depends="Option" attr="index">
+							<params>
+								<param name="Option" title="CDP指标选项" type="dt_integer" param_list="P10018" default="1"/>
+							</params>
+						</node>
+						<node name="ENV" title="ENV指标" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="14"/>
+								<param name="Option" title="ENV指标选项" type="dt_integer" param_list="P10019" default="1"/>
+							</params>
+						</node>
+						<node name="MIKE" title="MIKE麦克指标" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="12"/>
+								<param name="Option" title="MIKE指标选项" type="dt_integer" param_list="P10020" default="1"/>
+							</params>
+						</node>
+						<node name="LB" title="量比" process="1077" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="5"/>
+							</params>
+						</node>
+						<node name="VMA" title="VMA量简单移动平均" process="1078" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="5"/>
+							</params>
+						</node>
+						<node name="VMACD" title="VMACD量指数平滑异同平均" process_depends="Option" attr="index">
+							<params>
+								<param name="Short-term-days" title="短周期" type="dt_integer" default="12"/>
+								<param name="long-term-days" title="长周期" type="dt_integer" default="26"/>
+								<param name="day" title="周期" type="dt_integer" default="9"/>
+								<param name="Option" title="VMACD指标选项" type="dt_integer" param_list="P10021" default="1"/>
+							</params>
+						</node>
+						<node name="VOSC" title="VOSC成交量震荡" process="1073" attr="index">
+							<params>
+								<param name="Short-term-days" title="短周期" type="dt_integer" default="12"/>
+								<param name="long-term-days" title="长周期" type="dt_integer" default="26"/>
+							</params>
+						</node>
+						<node name="TAPI" title="TAPI加权指数成交值" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="6"/>
+								<param name="Option" title="TAPI指标选项" type="dt_integer" param_list="P10022" default="1"/>
+							</params>
+						</node>
+						<node name="VSTD" title="VSTD成交量标准差" process="1076" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="10"/>
+							</params>
+						</node>
+						<node name="ADTM" title="ADTM动态买卖气指标" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="23"/>
+								<param name="day1" title="周期1" type="dt_integer" default="8"/>
+								<param name="Option" title="ADTM指标选项" type="dt_integer" param_list="P10023" default="1"/>
+							</params>
+						</node>
+						<node name="MI" title="MI动量指标" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="12"/>
+								<param name="Option" title="MI指标选项" type="dt_integer" param_list="P10024" default="1"/>
+							</params>
+						</node>
+						<node name="MICD" title="MICD异同离差动力指数" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="3"/>
+								<param name="day1" title="周期1" type="dt_integer" default="10"/>
+								<param name="day2" title="周期2" type="dt_integer" default="20"/>
+								<param name="Option" title="MICD指标选项" type="dt_integer" param_list="P10025" default="1"/>
+							</params>
+						</node>
+						<node name="RC" title="RC变化率指数" process="1086" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="50"/>
+							</params>
+						</node>
+						<node name="RCCD" title="RCCD异同离差变化率指数" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="59"/>
+								<param name="day1" title="周期1" type="dt_integer" default="21"/>
+								<param name="day2" title="周期2" type="dt_integer" default="28"/>
+								<param name="Option" title="RCCD指标选项" type="dt_integer" param_list="P10026" default="1"/>
+							</params>
+						</node>
+						<node name="SRMI" title="SRMI(MI修正指标)" process="1090" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="9"/>
+							</params>
+						</node>
+						<node name="DPTB" title="DPTB大盘同步指标" process="1091" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="7"/>
+								<param name="Option" title="大盘指标选项" type="dt_integer" param_list="P10027" default="1"/>
+							</params>
+						</node>
+						<node name="JDQS" title="JDQS阶段强势指标" process="1092" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="20"/>
+								<param name="Option" title="大盘指标选项" type="dt_integer" param_list="P10027" default="1"/>
+							</params>
+						</node>
+						<node name="JDRS" title="JDRS阶段弱势指标" process="1093" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="20"/>
+								<param name="Option" title="大盘指标选项" type="dt_integer" param_list="P10027" default="1"/>
+							</params>
+						</node>
+						<node name="ZDZB" title="ZDZB筑底指标" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="125"/>
+								<param name="day1" title="周期1" type="dt_integer" default="5"/>
+								<param name="day2" title="周期2" type="dt_integer" default="20"/>
+								<param name="Option" title="ZDZB指标选项" type="dt_integer" param_list="P10028" default="1"/>
+							</params>
+						</node>
+						<node name="ATR" title="ATR真实波幅" process_depends="Option" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="14"/>
+								<param name="Option" title="ATR指标选项" type="dt_integer" param_list="P10029" default="1"/>
+							</params>
+						</node>
+						<node name="MASS" title="MASS梅丝线" process="1098" attr="index">
+							<params>
+								<param name="day1" title="周期1" type="dt_integer" default="9"/>
+								<param name="day2" title="周期2" type="dt_integer" default="25"/>
+							</params>
+						</node>
+						<node name="STD" title="STD标准差" process="1099" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="26"/>
+							</params>
+						</node>
+						<node name="VHF" title="VHF纵横指标" process="1100" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="28"/>
+							</params>
+						</node>
+						<node name="CVLT" title="CVLT佳庆离散指标" process="1101" attr="index">
+							<params>
+								<param name="day" title="周期" type="dt_integer" default="10"/>
+							</params>
+						</node>
+					</nodes>
+				</node>
+				<node name="分时指标" title="分时指标" isgroup="true">
+					<nodes>
+						<node name="large_amt_timeline" title="主力净流入金额(分时)" attr="base" level="2">
+						</node>
+					</nodes>
+				</node>
+				<node name="资金流量指标" title="资金流量指标" isgroup="true">
+					<nodes>
+						<node name="active_buy_large_volume" title="主动买入特大单量" attr="base" level="2">
+						</node>
+						<node name="active_sell_large_volume" title="主动卖出特大单量" attr="base" level="2">
+						</node>
+						<node name="active_buy_main_volume" title="主动买入大单量" attr="base" level="2">
+						</node>
+						<node name="active_sell_main_volume" title="主动卖出大单量" attr="base" level="2">
+						</node>
+						<node name="active_buy_middle_volume" title="主动买入中单量" attr="base" level="2">
+						</node>
+						<node name="active_sell_middle_volume" title="主动卖出中单量" attr="base" level="2">
+						</node>
+						<node name="possitive_buy_large_volume" title="被动买入特大单量" attr="base" level="2">
+						</node>
+						<node name="possitive_sell_large_volume" title="被动卖出特大单量" attr="base" level="2">
+						</node>
+						<node name="possitive_buy_main_volume" title="被动买入大单量" attr="base" level="2">
+						</node>
+						<node name="possitive_sell_main_volume" title="被动卖出大单量" attr="base" level="2">
+						</node>
+						<node name="possitive_buy_middle_volume" title="被动买入中单量" attr="base" level="2">
+						</node>
+						<node name="possitive_sell_middle_volume" title="被动卖出中单量" attr="base" level="2">
+						</node>
+						<node name="active_buy_large_amount" title="主动买入特大单金额" attr="base" level="2">
+						</node>
+						<node name="active_sell_large_amount" title="主动卖出特大单金额" attr="base" level="2">
+						</node>
+						<node name="active_buy_main_amount" title="主动买入大单金额" attr="base" level="2">
+						</node>
+						<node name="active_sell_main_amount" title="主动卖出大单金额" attr="base" level="2">
+						</node>
+						<node name="possitive_buy_large_amount" title="被动买入特大单金额" attr="base" level="2">
+						</node>
+						<node name="possitive_sell_large_amount" title="被动卖出特大单金额" attr="base" level="2">
+						</node>
+						<node name="possitive_buy_main_amount" title="被动买入大单金额" attr="base" level="2">
+						</node>
+						<node name="possitive_sell_main_amount" title="被动卖出大单金额" attr="base" level="2">
+						</node>
+						<node name="active_buy_middle_amount" title="主动买入中单金额" attr="base" level="2">
+						</node>
+						<node name="active_sell_middle_amount" title="主动卖出中单金额" attr="base" level="2">
+						</node>
+						<node name="possitive_buy_middle_amount" title="被动买入中单金额" attr="base" level="2">
+						</node>
+						<node name="possitive_sell_middle_amount" title="被动卖出中单金额" attr="base" level="2">
+						</node>
+					</nodes>
+				</node>
+				<node name="_同花顺指数专有指标" title="同花顺指数专有指标" isgroup="true">
+					<nodes>
+						<node name="buyVolume" title="外盘" process="4001" attr="base">
+						</node>
+						<node name="sellVolume" title="内盘" process="4002" attr="base">
+						</node>
+						<node name="trans_num" title="成交次数" process="4003" attr="base">
+						</node>
+						<node name="raise_num" title="上涨家数" process="4004" attr="base">
+						</node>
+						<node name="fall_num" title="下跌家数" process="4005" attr="base">
+						</node>
+						<node name="total_delegate_buy_vol" title="总委托买入数量" process="4006" attr="base">
+						</node>
+						<node name="total_delegate_sell_vol" title="总委托卖出数量" process="4007" attr="base">
+						</node>
+						<node name="active_buy_large_vol" title="主动买入特大单量" process="4008" attr="base">
+						</node>
+						<node name="active_sell_large_vol" title="主动卖出特大单量" process="4009" attr="base">
+						</node>
+						<node name="active_buy_large_amt" title="主动买入特大单金额" process="4010" attr="base">
+						</node>
+						<node name="active_sell_large_amt" title="主动卖出特大单金额" process="4011" attr="base">
+						</node>
+						<node name="possitive_buy_large_vol" title="被动买入特大单量" process="4012" attr="base">
+						</node>
+						<node name="possitive_sell_large_vol" title="被动卖出特大单量" process="4013" attr="base">
+						</node>
+						<node name="possitive_buy_large_amt" title="被动买入特大单金额" process="4014" attr="base">
+						</node>
+						<node name="possitive_sell_large_amt" title="被动卖出特大单金额" process="4015" attr="base">
+						</node>
+						<node name="active_buy_main_vol" title="主动买入大单量" process="4016" attr="base">
+						</node>
+						<node name="active_sell_main_vol" title="主动卖出大单量" process="4017" attr="base">
+						</node>
+						<node name="active_buy_main_amt" title="主动买入大单金额" process="4018" attr="base">
+						</node>
+						<node name="active_sell_main_amt" title="主动卖出大单金额" process="4019" attr="base">
+						</node>
+						<node name="possitive_buy_main_vol" title="被动买入大单量" process="4020" attr="base">
+						</node>
+						<node name="possitive_sell_main_vol" title="被动卖出大单量" process="4021" attr="base">
+						</node>
+						<node name="possitive_buy_main_amt" title="被动买入大单金额" process="4022" attr="base">
+						</node>
+						<node name="possitive_sell_main_amt" title="被动卖出大单金额" process="4023" attr="base">
+						</node>
+						<node name="active_buy_middle_vol" title="主动买入中单量" process="4024" attr="base">
+						</node>
+						<node name="active_sell_middle_vol" title="主动卖出中单量" process="4025" attr="base">
+						</node>
+						<node name="active_buy_middle_amt" title="主动买入中单金额" process="4026" attr="base">
+						</node>
+						<node name="active_sell_middle_amt" title="主动卖出中单金额" process="4027" attr="base">
+						</node>
+						<node name="possitive_buy_middle_vol" title="被动买入中单量" process="4028" attr="base">
+						</node>
+						<node name="possitive_sell_middle_vol" title="被动卖出中单量" process="4029" attr="base">
+						</node>
+						<node name="possitive_buy_middle_amt" title="被动买入中单金额" process="4030" attr="base">
+						</node>
+						<node name="possitive_sell_middle_amt" title="被动卖出中单金额" process="4031" attr="base">
+						</node>
+					</nodes>
+				</node>
+			</nodes>
+		</node>
+	</nodes>
+</node>

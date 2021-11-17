@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="gb2312"?>
+<root>
+	<Group name="期股联动">
+		<node title="股票代码" name="thscode" belog="all"/>
+		<node title="股票名称" name="thsname" belog="all"/>
+		<node title="涨跌幅" name="changeRatio" belog="all"/>
+		<node title="现价" name="latest" belog="all"/>
+		<node title="涨跌" name="change" belog="all"/>
+		<node title="涨速" name="speed" belog="all"/>
+	</Group>
+</root>

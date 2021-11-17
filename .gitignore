@@ -1,0 +1,60 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+*.out
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+run/
+log/*.log
+test/
+bin/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Visual Studio Code related
+.vscode/
+
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Folders
+_obj
+_test
+
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
+
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+_testmain.go
+
+*.lock
+*.exe
+*.exe~
+*.test
+*.prof
+*.rar
+*.zip
+*.tar
+*.gz
+
+# OSX
+*.DS_Store
+*.db
+*.swp
