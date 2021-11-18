@@ -1,9 +1,9 @@
-##下载最新的库
+## 下载最新的库
 
     1. 访问http://quantapi.10jqka.com.cn/?page=downCenter
     2. 下载linux版本
 
-##整理目录并设置库环境变量
+## 整理目录并设置库环境变量
 
     例如：库下载保存并解压到：/usr/include/tonghuashun目录下
     1. 只留下bin64目录，其他目录和文件删除
@@ -22,13 +22,26 @@
            1. 重新进入终端
            2. source /etc/bash.bashrc
 
-##使用方式
+## 注意事项
+
+编译运行时如果出现：
+
+    /usr/bin/ld: warning: libidn.so.11, needed by ...
+
+请按照对应库，例如ubuntu下：
+
+    1. 查找对应库
+        apt search libidn
+    2. 下载按照对应库
+        apt install libidn11-dev
+
+## 使用方式
 
     1. 项目导入
         import . "github.com/haiyiyun/tonghuashun"
     2. 参见example目录sample.go
 
-##示例代码
+## 示例代码
 
 ```golang
 package main
