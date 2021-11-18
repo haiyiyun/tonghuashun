@@ -1,7 +1,7 @@
 package ths
 
-// #cgo CFLAGS: -I cpp/include
-// #cgo LDFLAGS: -L cpp/lib -lShellExport
+// #cgo CFLAGS: -I include
+// #cgo LDFLAGS: -L lib -lShellExport
 // #include <stdlib.h>
 // #include <stdbool.h>
 // #include <ExportFunction.h>
