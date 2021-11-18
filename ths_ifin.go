@@ -1,7 +1,7 @@
 package ths
 
 // #cgo CFLAGS: -I include
-// #cgo LDFLAGS: -L lib -lShellExport
+// #cgo LDFLAGS: -L ${SRCDIR}/lib -lShellExport
 // #include <stdlib.h>
 // #include <stdbool.h>
 // #include <ExportFunction.h>
