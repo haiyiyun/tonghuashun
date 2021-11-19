@@ -16,8 +16,9 @@
     3. 设置环境变量
         1. 设置临时环境变量
             export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/include/tonghuashun/bin64
-        2. 设置固定环境变量
-            echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/include/tonghuashun/bin64" >> /etc/bash.bashrc
+        2. 设置固定环境变量（二选一）
+            1. echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/include/tonghuashun/bin64" >> /etc/profile
+            2. echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/include/tonghuashun/bin64" >> /etc/bash.bashrc
         3. 是环境变量生效（二选一）
            1. 重新进入终端
            2. source /etc/bash.bashrc
