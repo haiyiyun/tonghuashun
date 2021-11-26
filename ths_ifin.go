@@ -23,7 +23,7 @@ func THS_iFinDLogin(username, password string) int {
 }
 
 //登出
-func THS_iFinDLogout(thscode, jsonIndicator, jsonParam, beginTime, endTime string) int {
+func THS_iFinDLogout() int {
 	retn := C.THS_iFinDLogout()
 	return int(retn)
 }
