@@ -33,7 +33,7 @@ typedef int (WINAPI *pfn_THS_iFinDLogin)(const char * szUserName, //用户名
 											const char * szPassword//密码
 											);
 
-typedef int (WINAPI *pfn_THS_ifinDLogout)();
+typedef int (WINAPI *pfn_THS_iFinDLogout)();
 
 typedef int (WINAPI *pfn_THS_BasicData)(const char *Code, 
 										   const char *indiname,
@@ -395,7 +395,7 @@ int  THS_AsySnapshot(IN const char * THSCode, //同花顺代码
 														 IN void* pUser, //调用者的自定义参数
 														 OUT int *piQueryID);//本次请求的ID，用于匹配返回结果
 
- int THS_ifinDLogout();
+ int THS_iFinDLogout();
 
  bool InitialFunction(const char* path);
 

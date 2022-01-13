@@ -10,16 +10,6 @@ import (
 	"unsafe"
 )
 
-//初始化
-func InitialFunction(path string) bool {
-	cpath := C.CString(path)
-	defer C.free(unsafe.Pointer(cpath))
-
-	retb := C.InitialFunction(cpath)
-
-	return bool(retb)
-}
-
 //登录
 func THS_iFinDLogin(username, password string) int {
 	cusername := C.CString(username)
@@ -34,7 +24,7 @@ func THS_iFinDLogin(username, password string) int {
 
 //登出
 func THS_iFinDLogout() int {
-	retn := C.THS_ifinDLogout()
+	retn := C.THS_iFinDLogout()
 	return int(retn)
 }
 
@@ -249,84 +239,6 @@ func THS_DateCount(exchange, param, startDate, endDate string) (int, string) {
 	defer C.free(unsafe.Pointer(cendDate))
 
 	retn := C.THS_DateCount(cexchange, cparam, cstartDate, cendDate, &pRetData)
-	retData := C.GoString(pRetData)
-
-	return int(retn), retData
-}
-
-//日内快照
-func THS_Snapshot(thscode, jsonIndicator, jsonParam, beginTime, endTime string) (int, string) {
-	var pRetData *C.char
-	defer C.free(unsafe.Pointer(pRetData))
-
-	cthscode := C.CString(thscode)
-	defer C.free(unsafe.Pointer(cthscode))
-	cjsonIndicator := C.CString(jsonIndicator)
-	defer C.free(unsafe.Pointer(cjsonIndicator))
-	cjsonParam := C.CString(jsonParam)
-	defer C.free(unsafe.Pointer(cjsonParam))
-	cbeginTime := C.CString(beginTime)
-	defer C.free(unsafe.Pointer(cbeginTime))
-	cendTime := C.CString(endTime)
-	defer C.free(unsafe.Pointer(cendTime))
-
-	retn := C.THS_Snapshot(cthscode, cjsonIndicator, cjsonParam, cbeginTime, cendTime, &pRetData)
-	retData := C.GoString(pRetData)
-
-	return int(retn), retData
-}
-
-//智能选股
-func THS_iwencai(searchString, parameter string) (int, string) {
-	var pRetData *C.char
-	defer C.free(unsafe.Pointer(pRetData))
-
-	csearchString := C.CString(searchString)
-	defer C.free(unsafe.Pointer(csearchString))
-	cparameter := C.CString(parameter)
-	defer C.free(unsafe.Pointer(cparameter))
-
-	retn := C.THS_iwencai(csearchString, cparameter, &pRetData)
-	retData := C.GoString(pRetData)
-
-	return int(retn), retData
-}
-
-//
-func THS_WCQuery(searchString, parameter string) (int, string) {
-	var pRetData *C.char
-	defer C.free(unsafe.Pointer(pRetData))
-
-	csearchString := C.CString(searchString)
-	defer C.free(unsafe.Pointer(csearchString))
-	cparameter := C.CString(parameter)
-	defer C.free(unsafe.Pointer(cparameter))
-
-	retn := C.THS_WCQuery(csearchString, cparameter, &pRetData)
-	retData := C.GoString(pRetData)
-
-	return int(retn), retData
-}
-
-//日期序列
-func THS_DateSerial(thscode, jsonIndicator, jsonParam, globalParam, beginTime, endTime string) (int, string) {
-	var pRetData *C.char
-	defer C.free(unsafe.Pointer(pRetData))
-
-	cthscode := C.CString(thscode)
-	defer C.free(unsafe.Pointer(cthscode))
-	cjsonIndicator := C.CString(jsonIndicator)
-	defer C.free(unsafe.Pointer(cjsonIndicator))
-	cjsonParam := C.CString(jsonParam)
-	defer C.free(unsafe.Pointer(cjsonParam))
-	cglobalParam := C.CString(globalParam)
-	defer C.free(unsafe.Pointer(cglobalParam))
-	cbeginTime := C.CString(beginTime)
-	defer C.free(unsafe.Pointer(cbeginTime))
-	cendTime := C.CString(endTime)
-	defer C.free(unsafe.Pointer(cendTime))
-
-	retn := C.THS_DateSerial(cthscode, cjsonIndicator, cjsonParam, cglobalParam, cbeginTime, cendTime, &pRetData)
 	retData := C.GoString(pRetData)
 
 	return int(retn), retData
